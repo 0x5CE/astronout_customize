@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "astronout_customize": {
+      "candid": "src/astronout_customize/astronout_customize.did",
+      "package": "astronout_customize",
+      "type": "rust"
+    },
+    "astronout_customize_assets": {
+      "dependencies": [
+        "astronout_customize"
+      ],
+      "frontend": {
+        "entrypoint": "src/astronout_customize_assets/src/index.html"
+      },
+      "source": [
+        "src/astronout_customize_assets/assets",
+        "dist/astronout_customize_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
